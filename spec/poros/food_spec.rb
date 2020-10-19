@@ -5,7 +5,7 @@ RSpec.describe Food do
     attrs = {
       description: "Sweet Potatoe Casserole",
       gtinUpc: "070560952345",
-      brand_owner: "Food Network",
+      brandOwner: "Food Network",
       ingredients: "Sweet Potatoe"
     }
 
@@ -14,7 +14,7 @@ RSpec.describe Food do
     expect(food).to be_a Food
     expect(food.description).to eq(attrs[:description])
     expect(food.gtin).to eq(attrs[:gtinUpc])
-    expect(food.brand_owner).to eq(attrs[:brand_owner])
+    expect(food.brand_owner).to eq(attrs[:brandOwner])
     expect(food.ingredients).to eq(attrs[:ingredients])
   end
 end
