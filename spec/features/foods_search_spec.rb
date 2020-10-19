@@ -21,7 +21,7 @@ RSpec.describe 'Foods Search' do
 
     click_on 'Search'
 
-    expect(current_path).to eq("/foods")
+    expect(current_path).to eq(foods_path)
 
     expect(page).to have_css('.food', count: 10)
 
