@@ -5,6 +5,9 @@ class FoodsFacade
   end
 
   def foods
-    @food_service.food_results(@food)
+    json = @food_service.food_results(@food)
+    json.map do |food_info|
+      Food.new(food_info)
+    end
   end
 end
