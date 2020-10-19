@@ -2,15 +2,15 @@
 
 <% @foods.each do |food| %>
   <section class='food'>
-    <h3 class='description'>Descrition: <%= food[:description] %></h3>
+    <h3 class='description'>Descrition: <%= food.description %></h3>
    <ul>
-      <% if food[:gtinUpc]  %>
-        <li class='gtin'>GTIN:<%= food[:gtinUpc] %></li>
+      <% if food.gtin  %>
+        <li class='gtin'>GTIN:<%= food.gtin %></li>
       <% else %>
         <li class='gtin'>GTIN: Unavailable</li>
       <% end %>
-      <li class='brand_owner'>Brand Owner: <%= food[:brandOwner] %></li>
-      <li class='ingredients'>Ingredients: <%= food[:ingredients] %></li>
+      <li class='brand_owner'>Brand Owner: <%= food.brand_owner %></li>
+      <li class='ingredients'>Ingredients: <%= food.ingredients %></li>
    </ul>
   </section><br><br>
 <% end %>
