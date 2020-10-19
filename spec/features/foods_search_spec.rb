@@ -26,8 +26,8 @@ RSpec.describe 'Foods Search' do
     expect(page).to have_css('.food', count: 10)
 
     within(first(".food")) do
-      expect(page).to have_css(".gtin")
       expect(page).to have_css(".description")
+      expect(page).to have_css(".gtin")
       expect(page).to have_css(".brand_owner")
       expect(page).to have_css(".ingredients")
     end
